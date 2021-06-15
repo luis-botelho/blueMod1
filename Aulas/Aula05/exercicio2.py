@@ -3,15 +3,13 @@
 
 key = str(input('Digite a senha: '))
 password = "Blue123"
-try_ = 0
-if key == password:
-    print('Senha digitada correta!')
-else:  
-    while not key == password:
-        try_ += 1
-        print('Senha incorreta, tente novamente. ')
-        key = str(input('Digite a senha: '))
-        if key == password:
-            print('Senha digitada correta!')
-            print(try_)
-            break
+error = 0
+while key != password :
+    error += 1
+    key = str(input('Senha errada!! digite novamente: '))
+    if key == password:
+        print("Bem vindo(a)")
+    elif key == 5:
+        print('Tentativas esgotadas')
+        break
+print(f'Você errou {error} vezesBlue')
