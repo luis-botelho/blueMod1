@@ -12,4 +12,4 @@ while key != password :
     elif key == 5:
         print('Tentativas esgotadas')
         break
-print(f'Você errou {error} vezesBlue')
+print(f'Você errou {error} vezes')
