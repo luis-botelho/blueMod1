@@ -62,15 +62,21 @@
 
 
 import random
-from typing import final
+from random import randint
 
 jogo = []
 final = []
 var = int(input('Digite a quantidade de jogos'))
-for y in range(var):
-    for i in range(6):
-        if i in jogo:
-            pass
-        else:
-            jogo.append(random.randint (1,60))
+for i in range(var):
+    while len(jogo) < 6:
+        num = randint (1,60)
+        if num not in jogo:
+            jogo.append(num)
+    final.append(jogo)
+    jogo.sort()
+    print(f'Jogo {i+1}: {jogo}')
+
+    jogo = []
+
 print(jogo)
+print(final)
