@@ -11,7 +11,7 @@ print('=========================================================================
 print('Bem vindo(a) ao game Jokenpô\n escolha entre Pedra, papel ou tesoura e veja se consegue ganhar do computador.')
 from random import randint
 from time import sleep
-computer = randint(1,3)
+
 select = ["Pedra","Papel","Tesoura"]
 loss = 0
 win = 0
