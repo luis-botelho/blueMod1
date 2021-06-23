@@ -2,7 +2,6 @@
 numbers = [1,4,5,6,7,9]
 square = dict()
 
-
 for i in numbers:
     square[i] = i**2
 print(square)
