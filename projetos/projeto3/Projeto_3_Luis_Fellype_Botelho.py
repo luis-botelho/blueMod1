@@ -14,6 +14,7 @@
 #porfessor, desculpe mas fiz 3 funções, porque não vi sentindo na pessoa votar depois validar ou não o voto baseado na idade, me atrapalhou na lógica, espero não perder ponto por isso lol, alem disso o código ficou mais bonitinho e estruturado ^-^
 from functions import autorizaVoto, votacao, apuracao
 condition = ""
+decision = {}
 #Apresentação 
 print('====================================================================================================\n                                  Votação para presidente 2022\n====================================================================================================')
 print('Bem vindo(a) as eleições 2022')
@@ -22,8 +23,10 @@ while condition != "NAO":
     name = str(input('Qual é seu nome ?\n').title().strip())
     year = int(input(f'Olá {name}, em qual ano Você nasceu ?\n'))
     age = 2021 - year
-    votacao(autorizaVoto(age))
-    condition = str(input('Tem mais alguém para votar ?').upper().replace(',','.'))
-apuracao(votacao)
+    vote = votacao(autorizaVoto(age))
+
+    decision.update(apuracao(vote))
+    condition = str(input('Tem mais alguém para votar ?\n').upper().replace(',','.'))
+print(decision)
 
 

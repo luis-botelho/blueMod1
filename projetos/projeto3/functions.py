@@ -1,3 +1,4 @@
+from operator import itemgetter, attrgetter
 def autorizaVoto(year):
     if year < 16:
       return 'Negado'
@@ -13,35 +14,39 @@ def votacao(validate):
     elif validate == 'Obrigatório':
         while vote > 5 or vote < 1:
             print('Escolha um dos candidatos no menu a abaixo:\n[1] Bolsonaro\n[2] Lula\n[3] Batman\n[4] Nulo\n[5] Voto em branco')
-            vote = int(input('opção'))
+            vote = int(input('opção\n'))
     elif validate == 'Opcional':
         option = str(input('Seu voto não é obrigatório deseja votar ?\n').upper().strip())
         if option[0] == "S":
             while vote > 5 or vote < 1:
                 print('Escolha um dos candidatos no menu a abaixo:\n[1] Bolsonaro\n[2] Lula\n[3] Batman\n[4] Nulo\n[5] Voto em branco')
-                vote = int(input('opção'))
+                vote = int(input('opção\n'))
         elif option [0] == "N":
             pass
         else:
             print('Você digitou algo errado, voto cancelado!')          
     return vote
-def apuracao(vote):
+def apuracao(choice):
     #dict com os nomes dos candidatos
     candidates = {'Bolsonaro': 0, 'Lula': 0, 'Batman': 0}
     #dict com os votos em brancos (Depois de pequisar descobri que na verdade os votos nulos e em branco só servem para questões estatisticas)
     null = {'Nulo':0,'Branco':0}
-    if vote == 1:
+
+    if choice == 1:
         candidates['Bolsonaro'] += 1
-    elif vote == 2:
+    elif choice == 2:
         candidates['Lula'] += 1
-    elif vote == 3:
+    elif choice == 3:
         candidates['Batman'] += 1
-    elif vote == 4:
+    elif choice == 4:
         null['Nulo'] += 1
-    elif vote == 5:
-        null['Branco'] += 1 
-    result = list(candidates)
-    print(result)
+    elif choice == 5:
+        null['Branco'] += 1
+    
+    return candidates
+    # result = list(candidates.items())
+    # sorted(result, key=itemgetter(1))
+    # print(result)
 
 
 
