@@ -1,4 +1,4 @@
-from operator import itemgetter, attrgetter
+
 def autorizaVoto(year):
     if year < 16:
       return 'Negado'
@@ -27,27 +27,18 @@ def votacao(validate):
             print('Você digitou algo errado, voto cancelado!')          
     return vote
 def apuracao(choice):
-    #dict com os nomes dos candidatos
-    candidates = {'Bolsonaro': 0, 'Lula': 0, 'Batman': 0}
-    #dict com os votos em brancos (Depois de pequisar descobri que na verdade os votos nulos e em branco só servem para questões estatisticas)
-    null = {'Nulo':0,'Branco':0}
-
+    candidate = ""
     if choice == 1:
-        candidates['Bolsonaro'] += 1
+        candidate = 'Bolsonaro'
     elif choice == 2:
-        candidates['Lula'] += 1
+        candidate = 'Lula'
     elif choice == 3:
-        candidates['Batman'] += 1
+        candidate = 'Batman'
     elif choice == 4:
-        null['Nulo'] += 1
+        candidate = 'Nulo'
     elif choice == 5:
-        null['Branco'] += 1
-    
-    return candidates
-    # result = list(candidates.items())
-    # sorted(result, key=itemgetter(1))
-    # print(result)
-
+        candidate = 'Branco'
+    return candidate
 
 
 
