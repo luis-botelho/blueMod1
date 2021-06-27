@@ -74,5 +74,3 @@ def winner(available,unavailable):
     print('tivemos', available['Batman'], 'votos para o Batman')
     print('tivemos', unavailable['Nulo'], 'votos nulos')
     print('tivemos', unavailable['Branco'], 'votos em branco')
-
-

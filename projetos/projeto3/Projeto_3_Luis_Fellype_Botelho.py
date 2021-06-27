@@ -18,7 +18,3 @@ while condition != "NAO":
     result(apuracao(vote), candidates, null)
     condition = str(input('Tem mais alguém para votar ?\n').upper().replace(',','.'))
 winner(candidates,null)
-
-
-
-
