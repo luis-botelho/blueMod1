@@ -66,11 +66,11 @@ def winner(available,unavailable):
     print(f'.',end='')
     sleep(0.5)
     print(f'.',end='')
-    sleep(1.5)
+    sleep(1.0)
     print(f'  {winner[2][0]}!')
     sleep(0.5)
-    print('tivemos', available['Bolsonaro'], 'votos para o bolsonaro')
-    print('tivemos', available['Lula'], 'votos para o Lula')
-    print('tivemos', available['Batman'], 'votos para o Batman')
-    print('tivemos', unavailable['Nulo'], 'votos nulos')
-    print('tivemos', unavailable['Branco'], 'votos em branco')
+    for key, value in available.items():
+        print(f'o candidato {key} teve {available[key]} votos')
+    sleep(0.5)
+    for key, value in unavailable.items():
+        print(f'Tivemos {unavailable[key]} votos {key}')
