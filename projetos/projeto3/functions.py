@@ -29,31 +29,17 @@ def votacao(validate):
         else:
             print('Você digitou algo errado, voto cancelado!')          
     return vote
-def apuracao(choice):
-    """Transforma o valor int digitado em um string para poder adicionar no dicionário"""
-    candidate = ""
-    if choice == 1:
-        candidate = 'Bolsonaro'
-    elif choice == 2:
-        candidate = 'Lula'
-    elif choice == 3:
-        candidate = 'Batman'
-    elif choice == 4:
-        candidate = 'Nulo'
-    elif choice == 5:
-        candidate = 'Branco'
-    return candidate
 def result(vote,available,unavailable):
-    """Adiciona conforme o voto valor ao dicionário"""
-    if vote == 'Bolsonaro':
+    """Pega o voto e adiciona valor ao dicionário"""
+    if vote == 1:
         available['Bolsonaro'] += 1
-    elif vote == 'Lula':
+    elif vote == 2:
         available['Lula'] += 1
-    elif vote == 'Batman':
+    elif vote == 3:
         available['Batman'] += 1
-    elif vote =='Nulo':
+    elif vote == 4:
         unavailable['Nulo'] += 1
-    elif vote == 'Branco':
+    elif vote == 5:
         unavailable['Branco'] += 1
 def winner(available,unavailable):
     """fase final, transformando o dicionário em uma lista e pegando o vencedor pelo indice"""

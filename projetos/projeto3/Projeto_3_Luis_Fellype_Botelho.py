@@ -1,5 +1,5 @@
 #Eu fiz uma bagunça aqui, começei a fazer no pensamento "Não faz sentido eu pegar o voto de quem não tem idade para votar", resumo : acabei com 5 funções, como estou com pouco tempo para fazer exercícios foi bom quebrar a cabeça aqui para treinar, vou estudar mais!
-from functions import autorizaVoto, votacao, apuracao,result, winner
+from functions import autorizaVoto, votacao,result, winner
 #Variável para continuar a receber votos até que digite não
 condition = ""
 #dict com os nomes dos candidatos
@@ -15,6 +15,6 @@ while condition != "NAO":
     year = int(input(f'Olá {name}, em qual ano Você nasceu ?\n'))
     age = 2021 - year 
     vote = votacao(autorizaVoto(age))
-    result(apuracao(vote), candidates, null)
+    result(vote, candidates, null)
     condition = str(input('Tem mais alguém para votar ?\n').upper().replace(',','.'))
 winner(candidates,null)
