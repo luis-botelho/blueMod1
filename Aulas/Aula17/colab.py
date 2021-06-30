@@ -16,16 +16,16 @@
 # jogador e quantas partidas ele jogou. Depois vai ler a quantidade de gols feito em cada partida. 
 # No final tudo isso será guardado em um dicionário, incluindo a média de gols por jogo, e o total 
 # de gols feitos durante o campeonato
-final = {}
-gols = []
+# final = {}
+# gols = []
 
-name = str(input('Qual nome ? :' ))
-games = int(input('Quantas partidas jogou ?: '))
-for i in range(games):
-    gol = int(input('Quantos jogos fez nessa partida ?: '))
-    gols.append(gol)
-final[name] = [(sum(gols) / games), sum(gols)]
-print(final)
+# name = str(input('Qual nome ? :' ))
+# games = int(input('Quantas partidas jogou ?: '))
+# for i in range(games):
+#     gol = int(input('Quantos jogos fez nessa partida ?: '))
+#     gols.append(gol)
+# final[name] = [(sum(gols) / games), sum(gols)]
+# print(final)
 
 class Jogador():
     from time import sleep
