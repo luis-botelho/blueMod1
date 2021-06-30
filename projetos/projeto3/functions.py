@@ -41,11 +41,9 @@ def vote(validate, available, unavailable):
     elif choice == 4:
         unavailable['Nulo'] += 1
     elif choice == 5:
-        unavailable['Branco'] += 1
-
+        unavailable['Branco'] += 
 def winner(available,unavailable):
-    #"""fase final, transformando o dicionário em uma lista e pegando o vencedor pelo indice"""
-
+    """fase final, transformando o dicionário em uma lista e pegando o vencedor pelo indice"""
     result = available.items()
     winner = sorted(result, key=itemgetter(1))
     print(f'E o candidato escolhido foi',end='')

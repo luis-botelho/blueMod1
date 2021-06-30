@@ -1,4 +1,4 @@
-#Eu fiz uma bagunça aqui, começei a fazer no pensamento "Não faz sentido eu pegar o voto de quem não tem idade para votar", resumo : acabei com 4 funções, como estou com pouco tempo para fazer exercícios foi bom quebrar a cabeça aqui para treinar, vou estudar mais!
+#Eu fiz uma bagunça aqui, começei a fazer no pensamento "Não faz sentido eu pegar o voto de quem não tem idade para votar", resumo : acabei com 3 funções, como estou com pouco tempo para fazer exercícios foi bom quebrar a cabeça aqui para treinar, vou estudar mais!
 from functions import authorizeVote, vote, winner
 #Variável para continuar a receber votos até que digite não
 condition = ""
