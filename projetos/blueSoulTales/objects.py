@@ -20,4 +20,4 @@ class Status():
         print(f'                               \U0001F5E1 Arma atual: {self.weapon}')
         print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
 class Player(Status):
-    def __init__(self)
+    def __init__(self):
