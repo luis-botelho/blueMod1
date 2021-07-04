@@ -1,46 +1,32 @@
-from objects import Player
-import pygame
+from projetos.blueSoulTales.Hist import part3
+from objects import *
+from Hist import *
+from pygame import *
+
 import sys
-import time
-pygame.mixer.init()
-pygame.mixer.music.load('C:\Github/blueMod1\projetos/blueSoulTales\data/TownTheme.mp3')
-pygame.mixer.music.play(-1)
+from time import*
+mixer.init()
+mixer.music.load('C:\Github/blueMod1\projetos/blueSoulTales\data/TownTheme.mp3')
+mixer.music.play(-1)
 
-player = Player(100,100,100,'Dia','Espada')
-player.printStatus()
-input('Grupo 10 é o poder!')
+print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
+print('Bem vindo(a) a Blue Soul')
+print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
+input('Aperte enter para continuar')
 sys.stdout.write("\033[2J")
-player.printStatus()
-time.sleep(0.5)
-input('Esse é um teste de string sobrepor textos no terminal')
+sleep(0.5)
+print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
+name = input('Qual nome do jogador ?:\n').title()
+print('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
+sys.stdout.write("\033[2J")
+sleep(1.0)
+status = Status(name)
+status.printStatus()
+part1()
+status.printStatus()
+part2()
+status.printStatus()
+part3()
+status.printStatus()
+menu1()
 
-print('\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
-sys.stdout.write("\033[2J")
-sys.stdout.write("\033[A")
-player.printStatus()
-time.sleep(0.5)
-input('Deu certo!')
-
-sys.stdout.write("\033[2J")
-sys.stdout.write("\033[A")
-player.printStatus()
-time.sleep(0.5)
-input('Nosso projeto')
-
-sys.stdout.write("\033[2J")
-sys.stdout.write("\033[A")
-player.printStatus()
-time.sleep(0.5)
-input('Vai ficar')
-
-sys.stdout.write("\033[2J")
-sys.stdout.write("\033[A")
-player.printStatus()
-time.sleep(0.5)
-input('INCRIVEL!')
-
-sys.stdout.write("\033[2J")
-sys.stdout.write("\033[A")
-player.printStatus()
-time.sleep(0.5)
-input('Estão preparados para fama e poder ?')
